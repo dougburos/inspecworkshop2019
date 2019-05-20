@@ -31,3 +31,13 @@ control 'mynginx-03' do
     its('modules') { should include 'mail_ssl' }
   end
 end
+
+control 'mynginx-04' do
+  title 'nginx-http-sysguard'
+  desc 'Checking for nginx-http-sysguard'
+  describe nginx do
+    its('modules') { should include 'nginx-http-sysguard' }
+  end
+
+  only_if  { os.debian? }
+end
