@@ -2,6 +2,8 @@
 
 May 20 2019 - this repo is a live history of changes made by me during the Workshop, then synced over to the sample AWS machine
 
+The files in the root were from the AWS machine, I thought they were interesting 
+
 WORKSHOP - BEGINNER
 INSPEC JUMPSTART
 Larry Eichenbaum, Chef
