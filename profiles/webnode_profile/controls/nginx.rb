@@ -41,3 +41,16 @@ control 'mynginx-04' do
 
   only_if  { os.debian? }
 end
+
+control 'mynginx-05' do
+  title 'Auth module'
+  desc 'Checking for an auth module'
+  describe.one do
+    describe nginx do
+      its('modules') { should include 'http_auth_request' }
+    end
+    describe nginx do
+      its('modules') { should include 'nginx-auth-ldap' }
+    end
+  end
+end 
