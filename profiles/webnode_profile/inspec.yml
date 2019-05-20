@@ -10,5 +10,5 @@ supports:
   platform: os
 
 depends:
-  - name: nginx-baseline
+  name: nginx-baseline
   supermarket: dev-sec/nginx-baseline
