@@ -57,3 +57,10 @@ control 'mynginx-05' do
     end
   end
 end
+
+require_controls 'nginx-baseline' do
+  control 'nginx-01'
+  control 'nginx-02' do
+    impact 0.6
+  end
+end
