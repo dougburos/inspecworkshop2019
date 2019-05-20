@@ -13,3 +13,11 @@ control 'mynginx-01' do
     its('headers.Content-Type') { should cmp 'text/html' }
   end
 end
+
+control 'mynginx-02' do
+  title 'Nginx Version'
+  desc 'Checking Nginx Version'
+  describe nginx do
+    it's('version') { should cmp >= '1.10.2' }
+  end
+end 
