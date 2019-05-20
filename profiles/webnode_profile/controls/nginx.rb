@@ -21,3 +21,13 @@ control 'mynginx-02' do
     its('version') { should cmp >= '1.10.2' }
   end
 end
+
+control 'mynginx-03' do
+  title 'Mandatory modules'
+  desc 'Checking mandatory modules'
+  describe nginx do
+    its('modules') { should include 'http_ssl' }
+    its('modules') { should include 'stream_ssl' }
+    its('modules') { should include 'mail_ssl' }
+  end
+end
