@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cloudcmd -a \
+    -u chef \
+    -p 123Chef321 \
+    --name 'InSpec Jumpstart' \
+    --one-file-panel \
+    --terminal \
+    --terminal-path `gritty --path` \
+    --root /home/chef \
+    --no-cache
+
